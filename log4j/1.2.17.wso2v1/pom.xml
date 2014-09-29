@@ -61,11 +61,22 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Import-Package>
+                            !com.ibm.uvm.tools.*,
+                            !com.sun.jdmk.comm.*,
+                            !javax.naming.*,
+                            !javax.jmdns.*,
+                            !javax.jms.*,
+                            !javax.mail.*,
+                            !javax.management.*,
+                            !javax.swing.*,
+                            !javax.xml.parsers.*,
+                            !org.w3c.dom.*,
+                            !org.xml.sax.*,
                             !org.apache.log4j.*,
                             *;resolution:=optional
                         </Import-Package>
                         <Export-Package>
-                            org.apache.log4j.*;version="${version.log4j}"
+                            org.apache.log4j.*;version="${orbit.version.log4j}"
                         </Export-Package>
                     </instructions>
                 </configuration>
